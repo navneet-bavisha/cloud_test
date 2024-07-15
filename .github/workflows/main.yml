@@ -17,7 +17,7 @@ jobs:
         id: script
         shell: bash
         run: |
-          if [[ "${{ github.event.head_commit.message }}" == "migrate_restart" ]]; then
+          #if [[ "${{ github.event.head_commit.message }}" == "migrate_restart" ]]; then
             echo "script-file=migrate_and_restart.sh" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.head_commit.message }}" == "migrate" ]]; then
             echo "script-file=migrate.sh" >> $GITHUB_OUTPUT
